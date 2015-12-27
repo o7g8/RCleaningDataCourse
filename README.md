@@ -9,7 +9,7 @@ Subject.
 
 ## How-to
 * Download the [Samsung sensors data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
-* Unzip the downloaded archive in your <directory>.
+* Unzip the downloaded archive in your `directory`.
 * Change R's working directory to "<directory>/UCI HAR Dataset": `setwd("<directory>/UCI HAR Dataset")`.
 * Execute the script: `source("<path-to-script>/run_analysis.R")`.
 * The cleaned data will be available in the `cleanNormalized` variable.
