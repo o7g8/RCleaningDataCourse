@@ -14,3 +14,7 @@ Subject.
 * Execute the script: `source("<path-to-script>/run_analysis.R")`.
 * The cleaned data will be available in the `cleanNormalized` variable.
 * You can also dump the data into a text file with a following command: `write.table(cleanNormalized, file="normalized.txt", row.names = FALSE)`
+
+
+## See also
+Code book is in `CodeBook.md`.
