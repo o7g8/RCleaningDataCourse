@@ -5,14 +5,14 @@ The data frame `cleanNormalized` returned by script `run_analysis.R` contains fo
 |Field no.| Field name | Type | Description |
 |---------|------------|------|-------------|
 |1| "tBodyAcc-mean()-X" | numeric | mean value of tBodyAcc on X-axis |         
- |2| "tBodyAcc-mean()-Y"  | numeric | mean value of tBodyAcc on Y-axis |                 
- |3| "tBodyAcc-mean()-Z" | numeric | mean value of tBodyAcc on Z-axis |                  
- |4| "tBodyAcc-std()-X"  | numeric | std.dev. value of tBodyAcc on X-axis |                  
- |5| "tBodyAcc-std()-Y"  | numeric | std.dev. value of tBodyAcc on Y-axis |                           
- |6| "tBodyAcc-std()-Z"  | numeric | std.dev. value of tBodyAcc on Z-axis |                           
- |7| "tGravityAcc-mean()-X" | numeric | mean value of tGravityAcc on X-axis |                        
- |8| "tGravityAcc-mean()-Y" | numeric | mean value of tGravityAcc on Y-axis |                              
- |9| "tGravityAcc-mean()-Z" | numeric | mean value of tGravityAcc on Z-axis |                              
+|2| "tBodyAcc-mean()-Y"  | numeric | mean value of tBodyAcc on Y-axis |                 
+|3| "tBodyAcc-mean()-Z" | numeric | mean value of tBodyAcc on Z-axis |                  
+|4| "tBodyAcc-std()-X"  | numeric | std.dev. value of tBodyAcc on X-axis |                  
+|5| "tBodyAcc-std()-Y"  | numeric | std.dev. value of tBodyAcc on Y-axis |                           
+|6| "tBodyAcc-std()-Z"  | numeric | std.dev. value of tBodyAcc on Z-axis |                           
+|7| "tGravityAcc-mean()-X" | numeric | mean value of tGravityAcc on X-axis |                        
+|8| "tGravityAcc-mean()-Y" | numeric | mean value of tGravityAcc on Y-axis |                              
+|9| "tGravityAcc-mean()-Z" | numeric | mean value of tGravityAcc on Z-axis |                              
 |10| "tGravityAcc-std()-X" | numeric | std.dev. value of tGravityAcc on X-axis |                               
 |11| "tGravityAcc-std()-Y" | numeric | std.dev. value of tGravityAcc on Y-axis |                                      
 |12| "tGravityAcc-std()-Z"  | numeric | std.dev. value of tGravityAcc on Z-axis |                                     
@@ -74,10 +74,15 @@ The data frame `cleanNormalized` returned by script `run_analysis.R` contains fo
 |68| "Subject" | integer | Number of a subject |                 
 
 None of the fields contains NA data.
+
 The `cleanNormalized` data is obtained from [Samsung sensors data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) by performing of following operations:
+
 1. mean()- and std()- related columns are extracted from test/X_test.txt file, then the data is joined with the activity data from test/y_test.txt and then with activity code descriptions from activity_labels.txt. Aftrewards a Subject column is added from test/subject_test.txt data.
+
 2. the same procedure is repeated for train/X_train.txt, train/y_train.txt and train/subject_train.txt
+
 3. data frames obtaind in the steps 1 and 2 are concatenated.
+
 4. the concatenated data is groupped by Activity and Subject and mean values are calculated for the numerical columns (the means are represented by columns 1-66 of `cleanNormalized`.
 
 You can find more details about columns 1-66 in the file `features_info.txt` in the source Samsung dataset.
