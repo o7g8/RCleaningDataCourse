@@ -12,5 +12,5 @@ Subject.
 * Unzip the downloaded archive in your <directory>.
 * Change R's working directory to "<directory>/UCI HAR Dataset": `setwd("<directory>/UCI HAR Dataset")`.
 * Execute the script: `source("<path-to-script>/run_analysis.R")`.
-* The cleaned data will be available in the `cleanNormalized variable`.
+* The cleaned data will be available in the `cleanNormalized` variable.
 * You can also dump the data into a text file with a following command: `write.table(cleanNormalized, file="normalized.txt", row.names = FALSE)`
